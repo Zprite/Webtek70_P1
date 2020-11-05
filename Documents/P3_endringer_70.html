@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <!--
+    View our page at https://prietzeria.xyz/
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P3 Design - Webtek 70</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1><span>P3 Design Changes - </span><span id="logo">Prietzeria</span></h1>
+      <h3>
+        Håvard Hjelmeseth, Henrik Holen, Hanne Prietz Theisen, Marcus Birkeland
+        og Jakob Lund Johannessen
+      </h3>
+      <h4>IT2805 4.11.2020</h4>
+
+      <div id="divider"></div>
+    </header>
+
+    <section>
+      <h2>2. Administrative Detaljer</h2>
+      <p>
+        <b> Klientnavn: Prietzeria </b>
+      </p>
+      <p>Prietzeria er en imaginær landsdekkende pizzarestaurant</p>
+      <p>
+        Nettside: <a href="https://prietzeria.xyz/">https://prietzeria.xyz/</a>
+      </p>
+      <p>Kontaktperson: Mario Italiano</p>
+
+      <h2>3. Endringer</h2>
+      <p>
+
+      </p>
+
+      <h2>4. Endelig filstruktur</h2>
+      <ul>
+        <li>index.html</li>
+        <li>menu.html</li>
+        <li>booking.html</li>
+        <li>contact.html</li>
+        <li>privacy.html</li>
+        <li>covid-19.html</li>
+
+        <li>
+          assets/
+          <ul>
+            <li>main.css</li>
+
+            <li>
+              info
+              <ul>
+                <li>items.json</li>
+              </ul>
+            </li>
+
+            <li>
+              scripts/
+              <ul>
+                <li>booking.js</li>
+                <li>foodOrder.js</li>
+                <li>hiddenForm.js</li>
+                <li>menu.js</li>
+                <li>menuSort.js</li>
+                <li>mobileNav.js</li>
+              </ul>
+            </li>
+
+            <li>
+              images/
+              <ul>
+                <li>logo.png</li>
+                <li>hero1.jpg</li>
+                <li>hero2.jpg</li>
+                <li>hero3.jpg</li>
+                <li>hero4.jpg</li>
+                <li>hero5.jpg</li>
+                <li>hero6.jpg</li>
+                <li>hero7.jpg</li>
+                <li>hero8.jpg</li>
+
+                <li>
+                  icons/
+                  <ul>
+                  <li>apple.png</li>
+                  <li>facebook.png</li>
+                  <li>language.png</li>
+                  <li>location.png</li>
+                  <li>mail.png</li>
+                  <li>resturantchoice.png</li>
+                </ul>
+              </li>
+
+              <li>dishes? legge til i images</li>
+              <li>bilder? droppe</li>
+              </ul>
+            </li>
+
+            <li>
+              styles/
+              <ul>
+                <li>style.css</li>
+                <li>menu.css</li>
+                <li>booking.css</li>
+              </ul>
+            </li>
+
+            <li>
+              Video
+              <ul>
+                <li>video-pizza.mp4</li>
+              </ul>
+            </li>
+
+          </ul> <!--assets-->
+        </li>
+
+      </ul> <!--Hele listen. Ta med mappen for documents?-->
+
+      <h2>5. Endelig arbeidsfordeling</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Filnavn</th>
+            <th>Beskrivelse</th>
+            <th>Ansvar</th>
+            <th>Frist</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>index.html</td>
+            <td>Hjemmesiden</td>
+            <td>Alle</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>menu.html</td>
+            <td>
+              Side for meny hvor brukeren har oversikt over alle retter og kan
+              bestille. Siden har et skjema som blir brukt til å behandle
+              bestilling.
+            </td>
+            <td>Marcus</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>contact.html</td>
+            <td>Kontaktinfo og søke jobb hos oss.</td>
+            <td>Hanne</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>booking.html</td>
+            <td>
+              Side for booking av bord ved hjelp av skjema. Brukes sammen med
+              booking.js
+            </td>
+            <td>Henrik</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>privacy.html</td>
+            <td>
+              Personvernserklæring. Kun en side som sier at vi tar hensyn til
+              personens personvern i forhold til COVID-19 sporing.
+            </td>
+            <td>Håvard</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>covid-19.html</td>
+            <td>
+              Side hvor man kan sende inn informasjon om sitt besøk på
+              resturanten.
+            </td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>logo.png</td>
+            <td>
+              Logo for header. En pizza med teksten Prietzeria (Photoshop)
+            </td>
+            <td>Hanne</td>
+            <td>15.10.2020</td>
+          </tr>
+          <tr>
+            <td>mobileNav.js</td>
+            <td>
+              JavaScript for en hamburgermeny som blir benyttet som navigasjon
+              for mobile enheter.
+            </td>
+            <td>Håvard</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>menuSort.js</td>
+            <td>
+              JavaScript for å søke og sortere bestillingsmenyen etter
+              brukerdefinerte parametere eks. pris, allergener osv. I tillegg
+              skal den ha en søkefunksjon
+            </td>
+            <td>Marcus, Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>renderItems.js - plassert i menu.js i stedet for å være en egen fil</td>
+            <td>
+              JavaScipt for å rendre rettene til html. Avhenger av menuSort.
+            </td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>booking.js</td>
+            <td>
+              Presenterer en kvittering av bordbooking etter brukerinteraksjon.
+            </td>
+            <td>Henrik</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>foodOrder.js</td>
+            <td>
+              Henter bestilling fra menyskjema og kan presentere gjeldende ordre
+              i en handlekurv. Lager også kvittering når bruker bestiller.
+            </td>
+            <td>Hanne</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>styling.css</td>
+            <td>CSS filen som inneholder all stylingen til nettsiden</td>
+            <td>Alle</td>
+            <td>01.11.2020</td>
+          </tr>
+          <tr>
+            <td>menu.css</td>
+            <td>
+              CSS-fil som inneholder styling for menu.html, vises kun på denne
+              siden
+            </td>
+            <td>Marcus</td>
+            <td>01.11.2020</td>
+          </tr>
+          <tr>
+            <td>items.json</td>
+            <td>Informasjon rundt alle rettene som er tilgjengelige</td>
+            <td>Marcus</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>loadingPizza.js - mangler</td>
+            <td>Loader siden med en pizza-loader</td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>Sluttevaluering</td>
+            <td>Dobbeltsjekke hver fil for feil, sjekke JavaScript og css</td>
+            <td>Alle</td>
+            <td>01.11.2020</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Kommentarer</h2>
+      <ul>
+        <li>dato for reservasjon og smitteoppsporing som åpner kalender vindu eller drop-down for dato, måned og år</li>
+        <li>legge til ulike bilder til hver rett som stemmer overens i stedet for å benytte seg av et pizza bildet for alle rettene</li>
+        <li>plassere + tegnet til høyre og - til venstre slik at antallet står i midten og det er lettere å trykke riktig</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Made with &lt;3 by Gruppe 70</p>
+    </footer>
+  </body>
+</html>

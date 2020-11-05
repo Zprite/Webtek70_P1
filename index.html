@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/form.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    <title>Prietzeria Resturant</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+    </header>
+
+    <div id="nav-placeholder">
+        Noe har gått galt med lastingen av navigasjonsmenyen
+    </div>
+    
+    <div id="screen">
+        <img id="noVideo" src="assets/images/hero1.png" alt="">
+        <video autoplay muted loop poster="assets/images/hero1.png">
+            <source src="assets/video/video-pizza.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <small> <a href="https://www.youtube.com/watch?v=kDtpVBzKhhE">Kilde</a></small>
+    <section>
+        <h1>Prietzeria</h1>
+        
+        <p>Prietzeria er en italiensk restaurant med smakfulle retter. Historien til Prietzeria går langt tilbake og har sin opprinnelse fra den italienske øyen Elba. Vi har tatt med oss oppskrifter fra Italia helt til Trondheim. Her har vi de beste råvarene
+            og god mat laget med kjærlighet av våre mesterkokker. </p>
+            <p>I over 50 år har Prietzeria servert velsmakende retter, og er kjent for sitt store utvalg av viner. Våre kokker har mange års erfaring på det italienske kjøkkenet og kombinerer alle mulige mattradisjoner. Prietzeria tilbyr et bredt utvalg av retter
+                og tar deg med på en italiensk smaksopplevelse du sent vil glemme. Alt er lagt til rette for en koselig kveld med god mat og godt selskap.</p>
+                
+        <p><strong>Velkommen til en ekte italiensk restaurant - Velkommen til Prietzeria!</strong></p>
+        
+    </section>
+    
+    <div class="hero" id="hero2"></div>
+    <small> <a href="https://comelite-arch.com/portfolio/venezia-italian-restaurant-interior-design/" target="_blank" rel="nofollow">Kilde</a></small>
+
+    <section>
+        <h2>Åpningstider</h2>
+
+        <p>Vi har et begrenset antall bord i bruk, slik at vi kan følge retningslinjene med tanke på antall gjester og avstand mellom bordene.</p>
+
+        <div class="border">
+            <h3>Åpningstider f.o.m 22. juni</h3>
+            <ul>
+                <li>Mandag - fredag 11:00 - 23:00</li>
+                <li>Lørdag 11:00 - 00:00</li>
+                <li>Søndag 12:00 - 22:00</li>
+            </ul>
+        </div>
+
+    </section>
+    
+    <div class="hero" id="hero3"></div>
+    <small><a href="https://concreteplayground.com/melbourne/bars/ines-wine-bar" target="_blank" rel="nofollow">Kilde</a> </small>
+    
+    <section>
+        <h2>Vinsmaking</h2>
+
+        <p>Omvisninger i vinkjelleren vår foregår den siste søndagen hver måned. Send oss en mail ved interesse! Vil du vite hva som skjer på spisestedene våre, om nyheter på menyen, tilbud, arrangementer eller andre matgleder? Meld deg på nyhetsbrevet vårt,
+            så sender vi deg siste nytt.</p>
+            
+            <p>
+            <button onclick="showForm();">Ja, jeg vil ha nyhetsbrev</button>
+        </p>
+        
+        <form style="display: none" id="hiddenForm" onsubmit="submitHiddenForm();">
+            <div class="form-grid">
+                <div class="form-grid-1">
+                    <label for="email">E-post:</label> <br />
+                    <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
+                </div>
+
+                <div class="form-grid-2">
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg ønsker nyhetsbrev, og godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
+                    <br /><br />
+                </div>
+
+                <div class="form-grid-3">
+                    <input type="submit" value="Abonner på nyhetsbrev" id="submitForm">
+                    <p id="formReply" style="display: none;"><strong>Takk for din påmelding!</strong> Du vil motta nyheter fra oss.</p>
+                </div>
+            </div>
+        </form>
+
+        <h3>Kontakt oss</h3>
+        <ul>
+            <li>+47 980 46 690</li>
+            <li>post@prietzeria.xyz</li>
+            <li>Kristianstenbakken 60 - 7014 Trondheim</li>
+        </ul>
+    </section>
+
+    <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
+    
+    
+    <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/hiddenForm.js"></script>
+    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+
+index.html
+Hjemmesiden
+Alle
+25.10.2020
+
+
+menu.html
+Side for meny hvor brukeren har oversikt over alle retter og kan bestille. Siden har et skjema som blir brukt til å behandle bestilling.
+Marcus
+25.10.2020
+
+
+contact.html
+Kontaktinfo og søke jobb hos oss.
+Hanne
+25.10.2020
+
+
+booking.html
+Side for booking av bord ved hjelp av skjema. Brukes sammen med booking.js
+Henrik
+25.10.2020
+
+
+privacy.html
+Personvernserklæring. Kun en side som sier at vi tar hensyn til personens personvern i forhold til COVID-19 sporing.
+Håvard
+25.10.2020
+
+
+covid-tracking.html
+Side hvor man kan sende inn informasjon om sitt besøk på resturanten.
+Jakob
+25.10.2020
+
+
+logo.png
+Logo for header. En pizza med teksten Prietzeria (Photoshop)
+Hanne
+15.10.2020
+
+
+mobileNav.js
+JavaScript for en hamburgermeny som blir benyttet som navigasjon for mobile enheter.
+Håvard
+25.10.2020
+
+
+menuSort.js
+JavaScript for å søke og sortere bestillingsmenyen etter brukerdefinerte parametere eks. pris, allergener osv. I tillegg skal den ha en søkefunksjon
+Marcus, Jakob
+25.10.2020
+
+
+renderItems.js
+JavaScipt for å rendre rettene til html. Avhenger av menuSort.
+Jakob
+25.10.2020
+
+
+booking.js
+Presenterer en kvittering av bordbooking etter brukerinteraksjon.
+Henrik
+25.10.2020
+
+
+foodOrder.js
+Henter bestilling fra menyskjema og kan presentere gjeldende ordre i en handlekurv. Lager også kvittering når bruker bestiller.
+Hanne
+25.10.2020
+
+
+styling.css
+CSS filen som inneholder all stylingen til nettsiden
+Alle
+01.11.2020
+
+
+menu.css
+CSS-fil som inneholder styling for menu.html, vises kun på denne siden
+Marcus
+01.11.2020
+
+
+items.json
+Informasjon rundt alle rettene som er tilgjengelige
+Marcus
+25.10.2020
+
+
+loadingPizza.js
+Loader siden med en pizza-loader
+Jakob
+25.10.2020
+
+
+Sluttevaluering
+Dobbeltsjekke hver fil for feil, sjekke JavaScript og css
+Alle
+01.11.2020
+
+
+

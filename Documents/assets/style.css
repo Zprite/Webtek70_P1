@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Italiana-regular";
+  src: url("Italiana-Regular.ttf");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+header,
+section {
+  background: #fefefe;
+  width: 60%;
+  margin: auto;
+  color: black;
+}
+
+#divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 0;
+  display: block;
+}
+
+header h4 {
+  margin-bottom: 4px;
+  font-family: "Italiana-regular", sans-serif;
+}
+
+section {
+  margin-top: 3em;
+}
+
+section h2 {
+  margin-top: 2em;
+}
+
+footer {
+  background: #e5e5e5;
+  width: 100%;
+  text-align: center;
+  margin-top: 2.5em;
+  padding: 0.5em 0 0.5em 0;
+  color: #212529;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+section > h2,
+section > h3 {
+  margin-top: 4em;
+}
+
+section > h2:first-child {
+  margin-top: 2em;
+}
+
+p {
+  font-size: 17px;
+}
+
+section > p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#logo {
+  font-family: "Italiana-regular", sans-serif;
+}
+
+figure {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  text-align: center;
+}
+
+img.small {
+  max-height: 300px;
+}
+
+figcaption {
+  display: block;
+  margin: 2em;
+  margin-bottom: 3em;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 1em;
+}
+.menu li:before {
+  content: "-";
+  padding-right: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+thead {
+  border-bottom-width: 3px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 2em;
+}
+
+th,
+td:first-child {
+  font-weight: bold;
+  font-size: 1.12em;
+}
+
+tr {
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(even),
+thead > tr {
+  background-color: #f2f2f2;
+}
+
+tbody > tr:last-child {
+  border: 0;
+}
+
+ul > li {
+  margin: 1em;
+}
+
+@media screen and (max-width: 758px) {
+  header,
+  section {
+    width: 95%;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/form.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    <title>Smittesporing - Prietzeria</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+    </header>
+
+    <div id="nav-placeholder">
+        Noe har gått galt med lastingen av navigasjonsmenyen
+    </div>
+    
+    <section>
+        <h2>Registrer ditt besøk hos Prietzerria</h2>
+        <form id="hiddenForm" onsubmit="submitHiddenForm();">
+            <div class="form-grid">
+                <div class="form-grid-1">
+                    <label for="name">Fullt navn:</label> <br />
+                    <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
+                    <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required />
+                    
+                    <label for="phone">Telefonnummer:</label> <br />
+                    <!-- Regex pattern: Bare tall, + og mellomrom -->
+                    <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required />
+                    
+                    <label for="email">E-post:</label> <br />
+                    <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required />
+                </div>
+                
+                <div class="form-grid-2">
+                    <label for="date">Besøksdato: </label> <br />
+                    <input type="date" id="date" name="date" value="" required>
+                    
+                    <label for="time">Ankomsttidspunkt: </label> <br />
+                    <select name="time" id="time" required>
+                        <option disabled selected value>-- Velg tidspunkt --</option>
+                      <option value="11:00">11:00</option>
+                      <option value="11:30">11:30</option>
+                      <option value="12:00">12:00</option>
+                      <option value="12:30">12:30</option>
+                      <option value="13:00">13:00</option>
+                      <option value="13:30">13:30</option>
+                      <option value="14:00">14:00</option>
+                      <option value="14:30">14:30</option>
+                      <option value="15:00">15:00</option>
+                      <option value="15:30">15:30</option>
+                      <option value="16:00">16:00</option>
+                      <option value="16:30">16:30</option>
+                      <option value="17:00">17:00</option>
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                      <option value="21:30">21:30</option>
+                      <option value="22:00">22:00</option>
+                      <option value="22:30">22:30</option>
+                    </select>
+                    <br />
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
+                </div>
+
+                <div class="form-grid-3">
+                    <input type="submit" value="Registrer besøk" id="submitForm">
+                    <p id="formReply" style="display: none;"><strong>Takk for du registrer deg!</strong> Dataen er sendt til Trondheim kommune.</p>
+                    <br />
+                </div>
+            </div>
+        </form>
+    </section>
+    <br>
+    <div class="hero" id="hero7"></div>
+    <small><a href="https://www.timeout.com/rome/restaurants/best-pizza-in-rome" target="_blank" rel="nofollow">Kilde</a> </small>
+    <br>
+    <br>
+    <br>
+    <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
+    
+    <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/hiddenForm.js"></script>
+    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/footer.js"></script>
+    
+</body>
+
+</html>

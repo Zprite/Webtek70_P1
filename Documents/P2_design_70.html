@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="nb">
+  <!--
+    View our page at https://prietzeria.xyz/
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P2 Design - Webtek 70</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1><span>P2 Design - </span><span id="logo">Prietzeria</span></h1>
+      <h3>
+        Håvard Hjelmeseth, Henrik Holen, Hanne Prietz Theisen, Marcus Birkeland
+        og Jakob Lund Johannessen
+      </h3>
+      <h4>4.10.2020</h4>
+
+      <div id="divider"></div>
+    </header>
+
+    <section>
+      <h2>2. Administrative Detaljer</h2>
+      <p>
+        <b> Klientnavn: Prietzeria </b>
+      </p>
+      <p>Prietzeria er en imaginær landsdekkende pizzarestaurant</p>
+      <p>
+        Nettside: <a href="https://prietzeria.xyz/">https://prietzeria.xyz/</a>
+      </p>
+      <p>Kontaktperson: Mario Italiano</p>
+
+      <h2>3. Hensikt, Mål og Publikum</h2>
+      <p>
+        Nettsiden sin hensikt er å presentere Pizzarestauranten og informere
+        brukerne om alt de skulle behøve av informasjon. Viktig informasjon om
+        restauranten Prietzeria vil bli formidlet gjennom hjemmesiden med «Om
+        oss»-informasjon og tilhørende sider som å booke bord, se menyen,
+        bestille mat, søke etter jobb hos de og få kontaktinformasjonen deres.
+        For Prietzeria går de italienske mattradisjonene langt tilbake i tid og
+        det er derfor viktig å gi et godt inntrykk utad til publikummet gjennom
+        enkelhet, eleganse og smakfullhet. Publikummet gjelder alle aldre og
+        pizza-glade mennesker. Restauranten er ikke bare et sted for å oppsøke
+        god og hjemmelaget italiensk mat, men også et sted man kan søke om jobb.
+        Prietzeria er opptatt av å gi gjestene sine god service og en rik
+        matopplevelse. Hovedmålet deres er å informere kundene sine om denne
+        pittoreske perlen.
+      </p>
+
+      <h2>4. Navigasjonsstruktur</h2>
+      <p>
+        Navigasjonsstrukturen til Prietzeria sin nettsiden kan beskrives som
+        enkel og tilgjengelig. Vi har valgt å dele inn navigasjonen til header
+        og footer, der de mest brukte sidene er plassert i header. Vi har fire
+        planlagte sider i headeren som skal kunne navigeres mellom. Detter er
+        for å ikke gjøre det for trangt på navigasjons-baren og strukturen vil
+        også gjøre nettsiden raskere å bruke. Alle sidene vil kun være ett klikk
+        unna hverandre.
+      </p>
+      <p>
+        På toppen av nettsiden vil det være en hovednavigasjon med lenker til de
+        mest brukte sidene. Vi har derfor valgt å kun inkludere fire lenker
+        øverst på denne nettsiden.
+      </p>
+
+      <ul>
+        <li>index.html</li>
+        <li>meny.html</li>
+        <li>booking.html</li>
+        <li>contact.html</li>
+      </ul>
+
+      <p>
+        Målet for brukerne av nettsiden er å enten bestille bord eller bestille
+        fra menyen. Dermed har vi valgt å inkludere lenker til disse to sidene
+        øverst på alle sidene.
+      </p>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig1"
+          class="small"
+          src="assets/p2/images/sitemap.png"
+          alt="Sidekart"
+        />
+        <figcaption>Figur 1 - sidekart</figcaption>
+      </figure>
+
+      <p>
+        Nederst på nettsiden skal det være en footer, med lenker til sidene som
+        er mindre besøkt.
+      </p>
+
+      <ul>
+        <li>covid-tracking.html</li>
+        <li>privacy.html</li>
+      </ul>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig2"
+          class="small"
+          src="assets/p2/images/sitelinks.png"
+          alt="Mockup av sidelenker"
+        />
+        <figcaption>Figur 2 - sidelinker</figcaption>
+      </figure>
+
+      <h2>5. Sidens layout og utseende</h2>
+      <p>
+        Den spesifikke stilen for nettsiden som vil legges til alle tilhørende
+        sider:
+      </p>
+      <ul>
+        <li>
+          Font: “Audrey” for all tekst og bokstavene æøå i fonten Intro Head R.
+          Størrelsen er 24 pt i navbaren, 26 pt i underoverskrifter og 24 pt i
+          generelle paragrafer. Underoverskriftene står i Bold.
+        </li>
+        <li>
+          Fargeskjema:
+          <ul>
+            <li>
+              Tekst: Lys gulaktig #D5C7AC for generell tekst på nettsiden,
+              viktig informasjon står i fargen rød #C72A36.
+            </li>
+            <li>
+              Logo: Teksten og ikonet står i fargen svart #000000. Fonten er
+              bold.
+            </li>
+            <li>Bakgrunn: Hvit #E5E5E5 og mørkeblå #171E28.</li>
+            <li>Links: Gul #FF9034.</li>
+            <li>
+              Skygger: Grå med hint av grønn #DCECE7 for alle knapper når de
+              blir hovered over. Skyggen er borte ellers og knappen har da samme
+              farge som bakgrunnsfargen som er mørkeblå. Rammen rundt er buet på
+              kantene og hvit.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Links: Navbaren oppe til høyre vil være mulig å klikke på for de ulike
+          respektive sidene; hjem som er hjemmesiden sin hovedside, menyen,
+          booking av bord og kontakt oss. Det vil også eventuelt være mulig å
+          trykke seg til hjemmesiden ved å trykke på logoen som alltid vil være
+          øverst. Nederst er det linker til smitteoppsporing og
+          personvernerklæring.
+        </li>
+        <li>
+          Navigasjonsbar sin posisjon og utseende: Navbaren er posisjonert oppe
+          i headeren til høyre innenfor den mørkeblå boksen. Når musen er
+          hovered over en knapp i navbaren vil bakgrunnen få en mørkere skygge.
+        </li>
+        <li>
+          Banner: På toppen av siden vil brukeren alltid se logoen til
+          “PRIETZERIA” med et kart over italia på begge sider. Bakgrunnen er
+          hvit #E5E5E5 her.
+        </li>
+        <li>Footer: mailen til Prietzeria: post@prietzeria.xyz og adresse.</li>
+        <li>Nettsiden skal også følge de tekniske WCAG-kravene.</li>
+      </ul>
+
+      <h2>6. Innhold</h2>
+      <p>
+        Nettsiden vil inneholde fire sider og navbaren vil være plassert oppe
+        til høyre til enhver tid. Footeren vil også ligge på bunnen på alle de
+        respektive sidene til hjemmesiden. I navbaren finner brukeren fire
+        elementer; hjemmeside, bestilling, book bord og kontakt oss. Hjemmesiden
+        inneholder generell info om pizzarestauranten, bestilling har menyen og
+        muligheten til å bestille mat på nett, book bord er booking for når du
+        vil spise på Prietzeria og til slutt kontakt oss gir brukeren
+        kontaktinformasjon, muligheten å søke jobb og se hvor restauranten er
+        lokalisert. Det vil i tillegg være link til to ekstra sider på bunnen av
+        siden i footeren som er smitteoppsporing og personvernerklæring.
+      </p>
+
+      <h3>6.1. Hjemmeside - index.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig3"
+          src="assets/p2/images/index.png"
+          alt="Layout index.html"
+        />
+        <figcaption>Figur 3 - mockup av index.html</figcaption>
+      </figure>
+
+      <p>
+        Hjemmesiden skal gi brukerne et godt inntrykk av restauranten, gjennom
+        videoer, bilder, logo og tekst. Dette er brukerens første møte med
+        restauranten og det er derfor viktig å gi et pittoreskt inntrykk som
+        stemmer overens med virkeligheten. Prietzeria skal utstråle eleganse,
+        enkelhet og smakfullhet. Navbaren er tydelig plassert og enkel å forstå
+        seg på mens selve siden er informativ med all generell informasjon om
+        restauranten. Her vil bakgrunnen til Prietzeria bli kort beskrevet,
+        åpningstider vist og det vil spilles av en video øverst som viser
+        italiensk matlaging. Denne videoen vil spilles av automatisk med en gang
+        brukeren kommer til hjemmesiden og den vil gå på replay.
+      </p>
+
+      <h3>6.2. Bestilling - menu.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig4"
+          src="assets/p2/images/menu.png"
+          alt="Layout menu.html"
+        />
+        <figcaption>Figur 4 - mockup av menu.html</figcaption>
+      </figure>
+
+      <p>
+        Bestilling er en side der menyen vises. Brukeren kan velge å bestille
+        over nett med “Takeaway”-knappen. Om brukeren skulle befinne seg på
+        restauranten allerede vil det være mulig å trykke “Spise her” i stedet.
+        Deretter vil det være mulig å scanne QR-koden på det aktuelle bordet,
+        legge til bordnummer og bestille via nettsiden. For å hindre smitte er
+        det ønskelig at man bestiller ved bordet, over nett, i stedet for å
+        bestille fra en servitør. Dette implementeres dermed på nettsiden for å
+        kunne imøtekomme kundens ønsker. I tillegg vil vi eventuelt lage en app
+        for restauranten som kundene kan laste ned, men det vil også være mulig
+        å bestille gjennom nettsiden.
+      </p>
+
+      <p>
+        Menyen har en passe mengde slik at den ikke skal virke overveldende. I
+        tillegg vil det være to retter som er “Dagens” og vil variere fra tid
+        til annen. Overskriftene til rettene står på italiensk og allergener vil
+        være angivelige om ønsket for brukeren.
+      </p>
+
+      <p>
+        Bestilling vil inneholde meny med underoverskriftene antipasti, paste,
+        pizze og dolci. Det er 18 retter totalt og de organiseres med navnet på
+        retten først for så en kort beskrivelse av maten og under der igjen
+        kommer prisen.
+      </p>
+
+      <h3>6.3. Book bord - booking.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig5"
+          src="assets/p2/images/booking.png"
+          alt="Layout booking.html"
+        />
+        <figcaption>Figur 5 - mockup av booking.html</figcaption>
+      </figure>
+
+      <p>
+        Book bord viser et skjema med input-felter for navn, e-post, telefon,
+        ønsket dato og klokkeslett. Skjemaet skal deretter valideres.
+        Informasjon om databehandling og lenke til personvernerklæring befinner
+        seg også på denne nettsiden. Dette er for å ivareta brukeren sin
+        sikkerhet og trygghet.
+      </p>
+
+      <h3>6.4. Kontakt oss - contact.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig6"
+          src="assets/p2/images/contact.png"
+          alt="Layout contact.html"
+        />
+        <figcaption>Figur 6 - mockup av contact.html</figcaption>
+      </figure>
+
+      <p>
+        Øverst på kontakt oss vil kontaktinformasjonen vises og deretter kommer
+        et kart for å vise lokalisasjonen til restauranten. Under kartet er det
+        informasjon om gavekort brukeren kan kjøpe. Lenger nede på siden vil
+        jobbsøking forklares, her er det mulig å trykke på en knapp “Søk her”.
+        Til slutt kommer noen anmeldelser og quotes fra gjester som har spist på
+        Prietzeria. Kontakt oss inneholder lenke til personvernerklæring og
+        smitteoppsporing nederst på siden.
+      </p>
+
+      <h3>6.5. Smitteoppsporing - covid-tracking.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig7"
+          src="assets/p2/images/covid-tracking.png"
+          alt="Layout covid-tracking.html"
+        />
+        <figcaption>Figur 7 - mockup av covid-tracking.html</figcaption>
+      </figure>
+
+      <p>
+        Registreringsskjema for besøkende av restauranten. Skjemaet skal
+        inneholde input-felter for navn, dato og tid, i tillegg til
+        telefonnummer og e-postadresse. Dette skjemaet skal også valideres og
+        nettsiden vil inneholde informasjon om databehandling og lenke til
+        personvernerklæring.
+      </p>
+
+      <h3>6.6. Personvernerklæring - privacy.html</h3>
+
+      <figure>
+        <img
+          loading="lazy"
+          id="fig8"
+          src="assets/p2/images/privacy.png"
+          alt="Layout privacy.html"
+        />
+        <figcaption>Figur 8 - mockup av privacy.html</figcaption>
+      </figure>
+
+      <p>
+        Side som beskriver hvordan restauranten behandler personvern etter
+        innsendt data til smittesporing og etter bestilt mat. Innholdet her vil
+        være beskrivende, men ikke oppfylle GDPR-kvalitet da vi ikke faktisk
+        samler dataen.
+      </p>
+
+      <h2>7. Minstekrav</h2>
+
+      <h4>Modularitet</h4>
+
+      <p>
+        Vi har som mål å kunne gjenbruke mest mulig kode. Header (med
+        navigasjon) og footer er lik for alle sidene. Hamburgermenyen er det
+        største modulære komponentet, i og med at det skal brukes på alle sider
+        og alltid være tilgjengelig.
+      </p>
+
+      <h3>7.1. Script</h3>
+
+      <h4>mobileNav.js</h4>
+
+      <p>
+        mobileNav er et modulært JavaScript komponent som brukes i konjunksjon
+        med header/nav i alle sidene når nettsiden brukes på mobil og på smale
+        viewports. Menyen er designet som en vanlig hamburgermeny. Denne filen
+        sørger for at menyen flytter seg inn og ut av viewport når brukeren
+        klikker på menyen i navbaren.
+      </p>
+
+      <h4>foodOrder.js</h4>
+
+      <p>
+        foodOrder er en JavaScript-fil som skal brukes sammen med menu.html.
+        Filen skal inneholde funksjoner som skal brukes for å presentere
+        gjeldende ordre, og til slutt behandle ordren når brukeren bestiller.
+        getOrder() er en funksjon som skal kjøres hver gang brukeren gjør en
+        endring i ordren (f.eks. legger til en pizza, endrer antall), og
+        returnerer en liste med retter som er i ordren. printOrder() skal være
+        en funksjon som skal presentere ordren i en egen seksjon på siden.
+      </p>
+
+      <h4>menuSort.js</h4>
+
+      <p>
+        menuSort er en JavaScript-fil som skal brukes sammen med menu.html.
+        Filen skal inneholde en søkefunksjon searchItems(string query) som skal
+        returnere de rettene med navn som inneholder bokstavene i søket. I
+        tillegg kan vi vurdere å ha en funksjon filterItems(string[] allergens)
+        som lar brukeren sortere vekk retter som inneholder angitte allergener.
+        Denne funksjonen er også avhengig av en funksjon getAllergens() som
+        henter brukerangitte allergener fra siden. Etter sorteringen kaller
+        menuSort på renderItems() som laster inn rettene til html-siden
+        menu.html.
+      </p>
+
+      <h4>renderItems.js</h4>
+      <p>
+        renderItems er funksjonen som laster retter opp på menu.html, etter at
+        rettene er blitt lastet inn og sortert av menuSort
+      </p>
+
+      <h4>booking.js</h4>
+
+      <p>
+        booking er en JavaScript-fil som brukes med booking.html. Filen skal
+        hente bookingordre fra html-skjema, og lage en kvittering for
+        bordbestilling når brukeren bestiller bord.
+      </p>
+
+      <h4>imageSize.js</h4>
+      <p>En JavaScript for å legge til en interaktiv størrelse attribute</p>
+
+      <h4>loadingPizza.js</h4>
+
+      <p>
+        Vi vil bruke javascript til å emulere en backend som trenger tid på å
+        loade. Derfor vil vi lage en funksjon for å lage en loading-funksjons om
+        spinner en pizza frem til innholdet er klart til å vises.
+      </p>
+
+      <h3>7.2. Styling</h3>
+      <p>
+        Vi vil følge filstrukturen som vist under for å lage og store våre
+        filer. Arbeidet vil bli fordelt slik som tabellen viser slik at vi kan
+        følge en strukturert plan for hvem som gjør hva og vite når det skal
+        gjøres.
+      </p>
+
+      <h2>8. Plan</h2>
+
+      <p>
+        Vi vil følge filstrukturen som vist under for å lage og store våre
+        filer. Arbeidet vil bli fordelt slik som tabellen viser slik at vi kan
+        følge en strukturert plan for hvem som gjør hva og vite når det skal
+        gjøres.
+      </p>
+
+      <h3>8.1. Filstruktur</h3>
+      <ul>
+        <li>index.html</li>
+
+        <li>menu.html</li>
+        <li>booking.html</li>
+        <li>contact.html</li>
+        <li>privacy.html</li>
+        <li>covid-tracking.html</li>
+        <li>
+          assets/
+          <ul>
+            <li>
+              info
+              <ul>
+                <li>items.json</li>
+              </ul>
+            </li>
+            <li>
+              scripts/
+              <ul>
+                <li>mobileNav.js</li>
+                <li>imageSize.js</li>
+                <li>menuSort.js</li>
+                <li>renderItems.js</li>
+                <li>booking.js</li>
+                <li>foodOrder.js</li>
+              </ul>
+            </li>
+            <li>
+              images/
+              <ul>
+                <li>logo.png</li>
+              </ul>
+            </li>
+            <li>
+              styles/
+              <ul>
+                <li>styling.css</li>
+                <li>menu.css</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>8.2. Arbeidsfordeling og tidsfrister</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Filnavn</th>
+            <th>Beskrivelse</th>
+            <th>Ansvar</th>
+            <th>Frist</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>index.html</td>
+            <td>Hjemmesiden</td>
+            <td>Alle</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>menu.html</td>
+            <td>
+              Side for meny hvor brukeren har oversikt over alle retter og kan
+              bestille. Siden har et skjema som blir brukt til å behandle
+              bestilling.
+            </td>
+            <td>Marcus</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>contact.html</td>
+            <td>Kontaktinfo og søke jobb hos oss.</td>
+            <td>Hanne</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>booking.html</td>
+            <td>
+              Side for booking av bord ved hjelp av skjema. Brukes sammen med
+              booking.js
+            </td>
+            <td>Henrik</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>privacy.html</td>
+            <td>
+              Personvernserklæring. Kun en side som sier at vi tar hensyn til
+              personens personvern i forhold til COVID-19 sporing.
+            </td>
+            <td>Håvard</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>covid-tracking.html</td>
+            <td>
+              Side hvor man kan sende inn informasjon om sitt besøk på
+              resturanten.
+            </td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>logo.png</td>
+            <td>
+              Logo for header. En pizza med teksten Prietzeria (Photoshop)
+            </td>
+            <td>Hanne</td>
+            <td>15.10.2020</td>
+          </tr>
+          <tr>
+            <td>mobileNav.js</td>
+            <td>
+              JavaScript for en hamburgermeny som blir benyttet som navigasjon
+              for mobile enheter.
+            </td>
+            <td>Håvard</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>menuSort.js</td>
+            <td>
+              JavaScript for å søke og sortere bestillingsmenyen etter
+              brukerdefinerte parametere eks. pris, allergener osv. I tillegg
+              skal den ha en søkefunksjon
+            </td>
+            <td>Marcus, Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>renderItems.js</td>
+            <td>
+              JavaScipt for å rendre rettene til html. Avhenger av menuSort.
+            </td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>booking.js</td>
+            <td>
+              Presenterer en kvittering av bordbooking etter brukerinteraksjon.
+            </td>
+            <td>Henrik</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>foodOrder.js</td>
+            <td>
+              Henter bestilling fra menyskjema og kan presentere gjeldende ordre
+              i en handlekurv. Lager også kvittering når bruker bestiller.
+            </td>
+            <td>Hanne</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>styling.css</td>
+            <td>CSS filen som inneholder all stylingen til nettsiden</td>
+            <td>Alle</td>
+            <td>01.11.2020</td>
+          </tr>
+          <tr>
+            <td>menu.css</td>
+            <td>
+              CSS-fil som inneholder styling for menu.html, vises kun på denne
+              siden
+            </td>
+            <td>Marcus</td>
+            <td>01.11.2020</td>
+          </tr>
+          <tr>
+            <td>items.json</td>
+            <td>Informasjon rundt alle rettene som er tilgjengelige</td>
+            <td>Marcus</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>loadingPizza.js</td>
+            <td>Loader siden med en pizza-loader</td>
+            <td>Jakob</td>
+            <td>25.10.2020</td>
+          </tr>
+          <tr>
+            <td>Sluttevaluering</td>
+            <td>Dobbeltsjekke hver fil for feil, sjekke JavaScript og css</td>
+            <td>Alle</td>
+            <td>01.11.2020</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <p>Made with &lt;3 by Gruppe 70</p>
+    </footer>
+  </body>
+</html>

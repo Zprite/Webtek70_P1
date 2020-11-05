@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/menu.css" />
+
+    <script src="assets/info/items.js"></script>
+    <script src="assets/scripts/menu.js"></script>
+    <script src="assets/scripts/menuSort.js"></script>
+    <script src="assets/scripts/foodOrder.js"></script>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+
+    <title>Meny - Prietzeria</title>
+
+</head>
+
+<body onload="renderItems()">
+    <header>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+    </header>
+
+    <div id="nav-placeholder">
+        Noe har gått galt med lastingen av navigasjonsmenyen
+    </div>
+    
+    <div class="hero" id="hero4"></div>
+    <small> <a href="https://www.youtube.com/watch?v=kDtpVBzKhhE" target="_blank" rel="nofollow">Kilde</a></small>
+    
+    <div id="menu_container">
+        <div id="dishes_container">
+            <template id="dish_template">
+            <div class="dish_container">
+              <div class="img_container">
+                <img id="dish_img" src="">
+                <div id="order_ammount">
+                  <label>Antall: </label><br />
+                  <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepDown(); let e = this.parentNode.parentNode.querySelector('input[type=number]'); fireChange(e); " class="customInputButton">-</button>
+                  <input readonly name="ammount" class="orderInput" type="number" min="0" max="10" value="0">
+                  <button onclick="this.parentNode.parentNode.querySelector('input[type=number]').stepUp();let e = this.parentNode.parentNode.querySelector('input[type=number]');fireChange(e);" class="customInputButton">+</button>
+                  <script>
+                      function fireChange(element){
+                          var event = new Event('change');
+                    element.dispatchEvent(event);
+                }
+                </script>
+                </div>
+            </div>
+            <div class="menu_text">
+                <h2 id="item_name"></h2>
+                <p id="item_description"></p>
+                <p id="price"></p>
+            </div>
+        </div>
+          </template>
+          <div id="subsection_container1">
+              <div class="filter_container">
+                    <h1>Meny</h1>
+                    <div id="selectContainer">
+                        <label for="menuFilter">Filtrer meny:</label><br>
+                        <select name="filter" id="menuFilter" onchange="reRender()">
+                            <option value=0>Normal</option>
+                            <option value=1>Alfabetisk</option>
+                            <option value=2>Pris lav-høy</option>
+                            <option value=3>Pris høy-lav</option>
+                        </select>
+                    </div>
+                </div>
+                <nav>
+                    <div class="navbar" id="scrollMenu">
+                        <ul>
+                            <li><a href="#menu_antipasti">Antipasti</a></li>
+                            <li><a href="#menu_paste">Paste</a></li>
+                            <li><a href="#menu_pizze">Pizze</a></li>
+                            <li><a href="#menu_dolci">Dolci</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                
+                <div class="menu_subsection">
+                    <h2>Antipasti</h2>
+                    <div id="menu_antipasti"></div>
+                </div>
+                <div class="menu_subsection">
+                    <h2>Paste</h2>
+                    <div id="menu_paste"></div>
+                </div>
+                <div id="subsection_container2">
+                    <div class="menu_subsection">
+                        <h2 class="extra_padding">Pizze</h2>
+                        <div id="menu_pizze"></div>
+                    </div>
+                </div>
+                <div class="menu_subsection">
+                    <h2>Dolci</h2>
+                    <div id="menu_dolci"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="orderSection">
+        <div class="processOrderContainer">
+            <div class="orderSummary">
+                <div>
+                    <h2>Din ordre <span id="dishes"></span> </h2>
+                    <h3>Antall retter: <span id="orderedDishes">0</span></h3>
+                    <h3>Sum: <span id="totalPrice">0</span></h3>
+                </div>
+                
+                <div class="orderButtonContainer" id="order1">
+                    <h2>Hvor vil du spise?</h2>
+                    <button id="myBtn" onclick="modalHouse()">Spis her</button>
+                    <!-- Break for å ikke bruke sånn 1/3 av sidebredden -->
+                    <br>
+                    <button id="myBtnT" onclick="modalTakeaway()">Takeaway</button>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+    
+    <small>Alle bilder av maten på denne siden er hentet fra <a href="https://unsplash.com">Unsplash</a>.</small>
+
+    <div class="hero" id="hero5"></div>
+    <small><a href="https://www.elle.com/culture/travel-food/g27227/how-to-host-an-italian-dinner-party/" target="_blank" rel="nofollow">Kilde</a></small>
+    <br /><br /><br /><br /><br />
+    
+    <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
+    
+    <div id="modalHouseElem" class="modal">
+        <div class="modal-content">
+            <span id="closeHouse" class="close">&times;</span>
+            <h2>Din ordreoversikt</h2>
+            <div class="modal-body">
+                <h3>Antall retter: <span id="finalDishes">0</span></h3>
+                <ul id="orderReceipt"></ul>
+                <h3>Sum: <span id="finalPrice">0</span> ,-</h3>
+                <label for="tableNr">Bordnummer: </label>
+                <br />
+                <select name="tableNr" id="tableNr">
+                    <optgroup label="Inne">
+                        <option value="1">#1</option>
+                        <option value="2">#2</option>
+                        <option value="3">#3</option>
+                        <option value="4">#4</option>
+                    </optgroup>
+                    <optgroup label="Ute">
+                        <option value="5">#5</option>
+                        <option value="6">#6</option>
+                        <option value="7">#7</option>
+                        <option value="8">#8</option>
+                        <option value="9">#9</option>
+                        <option value="10">#10</option>
+                        <option value="11">#11</option>
+                        <option value="12">#12</option>
+                    </optgroup>
+                </select>
+                <br />
+                <button type="button" onclick="alert('Takk for din bestilling! \n\nDu vil nå bli videresendt til vår betalingspartner, Vipps.'); window.location.href='https://vipps.no';">Betal med Vipps</button>
+                <button type="button" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest. \n\nTrykk OK for å gjøre en ny bestilling.'); window.location.href='menu.html';">Betal med kort</button>
+                <button type="button" onclick="alert('Takk for din bestilling! En servitør vil ankomme ditt bord snarest. \n\nTrykk OK for å gjøre en ny bestilling.'); window.location.href='menu.html';">Betal med gavekort</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modalTakeawayElem" class="modal">
+        <div class="modal-content">
+            <span id="closeTakeaway" class="close">&times;</span>
+            <h2>Våre takeaway samarbeidspartnere</h2>
+            <div class="modal-body">
+                <h3>Antall retter: <span id="finalDishesT">0</span></h3>
+                <ul id="orderReceiptTakeaway"></ul>
+                <h3>Sum: <span id="finalPriceT">0</span> ,-</h3>
+                <br>
+                <h3>Velg ønsket matleveringstjeneste som viderekobler deg til nettsiden deres</h3>
+            </div>
+            <button type="button" onclick="alert('Takk for din bestilling! \n\nDu vil nå bli videresendt til vår matleveringspartner, Foodora.'); window.location.href='https://foodora.no';">Bestill med Foodora</button>
+            <button type="button" onclick="alert('Takk for din bestilling! \n\nDu vil nå bli videresendt til vår matleveringspartner, Wolt.'); window.location.href='https://foodora.no';">Bestill med Wolt</button>
+            <button type="button" onclick="alert('Så hyggelig du vil ringe oss! \n\nDu kan nå oss på +47 980 46 690'); window.location.href='tel:+4798046690';">Ring og bestill</button>
+        </div>
+    </div>
+    
+    <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/foodCart.js"></script>
+    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/footer.js"></script>
+</body>
+
+</html>

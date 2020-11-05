@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/form.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
+    <title>Book bord - Prietzeria</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.png" alt="Prietzeria"></a>
+    </header>
+
+    
+    <div id="nav-placeholder">
+        Noe har gått galt med lastingen av navigasjonsmenyen
+    </div>
+    
+    <section>
+        <h2>Book bord</h2>
+        <form id="bookingForm" onsubmit="goPart1();">
+            <div class="form-grid" id="formPart1">
+                <div class="form-grid-1">
+                    <label for="name">Fullt navn:</label> <br />
+                    <!-- Regex pattern: Bare alfabetiske karakterer, mellomrom, æ, ø og å -->
+                    <input type="text" name="name" id="name" pattern="[A-Za-z æøåÆØÅ]+" placeholder="Ola Nordmann" required>
+                    
+                    <label for="phone">Telefonnummer:</label> <br />
+                    <!-- Regex pattern: Bare tall, + og mellomrom -->
+                    <input type="text" name="phone" id="phone" pattern="[1234567890 +]+" placeholder="+47 845 45 945" required>
+                    
+                    <label for="email">E-post:</label> <br />
+                    <input type="email" name="email" id="email" placeholder="ola.nordmann@e-post.no" required>
+
+                </div>
+                
+                <div class="form-grid-2">
+                    <label for="quantity">Antall besøkende: </label>
+                    <select name="quantity" id="quantity" required>
+                        <option disabled selected value>-- Velg antall --</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+
+                    <label for="date">Dato: <small>(Det er kun mulig å reservere en måned frem i tid)</small></label> <br />
+                    <input type="date" id="date" name="date" value="">
+
+                    <label for="time">Klokkeslett: </label> <br />
+                    <select name="time" id="time" required>
+                        <option disabled selected value>-- Velg tidspunkt --</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:30">15:30</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                        <option value="22:30">22:30</option>
+                    </select>
+                </div>
+                
+                <div class="form-grid-3">
+                    <br>
+                    <input type="submit" value="Gjennomgå reservasjon" id="submitPart1">
+                </div>
+            </div>
+
+            <div class="form-grid" id="formPart2" style="display: none;">
+                <div class="form-grid-1">
+                    <p id="finalOutput"></p>
+                    <input type="button" value="Endre reservasjon" onclick="backPart2()" id="submitBackPart2">
+                </div>
+
+                <div class="form-grid-2">
+                    <input type="checkbox" id="consent" name="consent" value="yes"> <label for="consent"> Jeg godtar <u><a href="privacy.html" target="_blank">personvernerklæringen</a></u>.</label>
+                    <br /><br />
+
+                    <input type="button" value="Bekreft reservasjon" onclick="goPart2();" id="submitPart2">
+                </div>
+
+                <div class="form-grid-3">
+                </div>
+            </div>
+
+            <div class="form-grid" id="formPart3" style="display: none;">
+                <div class="form-grid-1">
+                    <h3>Takk! Din reservasjon er nå registrert</h3>
+                </div>
+
+                <div class="form-grid-2">
+                </div>
+
+                <div class="form-grid-3">
+                    <p><strong>Vi sees! Venligst ta kontakt med oss dersom du ønsker å endre din reservasjon.</strong></p>
+                </div>
+            </div>
+        </form>
+        
+        
+    </section>
+    
+    <section id="tilgjengelig">
+        <h1>Er ikke ønsket tidspunkt tilgjengelig?</h1>
+        
+        <p>Vi prøver alltid vårt beste for å finne bord til våre gjester. Kanskje vi klarer å oppfylle ønsket ditt likevel? Eventuelt kan du besøke en av våre søsterrestauranter.</p>
+
+        <p><strong>Ring oss på telefonnummer <a href="tel:+4798046690">+47 980 46 690</a>, eller send oss en <a href="mailto:post@prietzeria.xyz">e-post</a>.</strong></p>
+
+        <p>
+            <button onclick="sisterVisit();">Besøk en av våre søsterrestauranter</button>
+        </p>
+
+        <div class="border" style="display: none" id="sisterResturants">
+            <p><strong>Prietzeria Solsiden</strong> - Bedding 7, 7030 Trondheim</p>
+            <p><strong>Prietzeria Midtbyen</strong> - Olav Tryggvasons gt. 5, 7010 Trondheim</p>
+            <p><strong>Prietzeria Oslo</strong> - Karl Johans Gate 3, 1020 Oslo</p>
+            <p></p>
+        </div>
+
+    </section>
+    
+    <div class="hero" id="hero6"></div>
+    <small> <a href="https://www.bostonmagazine.com/restaurants/best-north-end-restaurants/" target="_blank" rel="nofollow">Kilde</a></small>
+
+    <br /><br />
+
+    <div id="footer-placeholder">Noe har gått galt med lastingen av navigasjonsmenyen</div>
+    
+    <script src="assets/scripts/mobileNav.js"></script>
+    <script src="assets/scripts/booking.js"></script>
+    <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/footer.js"></script>
+
+</body>
+
+</html>
